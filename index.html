@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видеофон с текстом</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Видеофон -->
+    <div class="video-bg">
+        <video autoplay muted loop id="background-video">
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.webm" type="video/webm">
+            <source src="video.ogv" type="video/ogg">
+            Ваш браузер не поддерживает воспроизведение видео.
+        </video>
+    </div>
+
+    <!-- Черный фон -->
+    <div class="overlay"></div>
+
+    <!-- Контент -->
+    <div class="content">
+        <div class="text-line">
+            <span class="word">We're</span>
+            <span class="gap"><canvas class="video-canvas"></canvas></span>
+            <span class="word">here</span>
+            <span class="gap"><canvas class="video-canvas"></canvas></span>
+            <span class="word">to</span>
+            <span class="word">make</span>
+        </div>
+        <div class="text-line">
+            <span class="word">healthy</span>
+            <span class="gap"><canvas class="video-canvas"></canvas></span>
+            <span class="word">living</span>
+            <span class="word">effortless,</span>
+        </div>
+        <div class="text-line">
+            <span class="word">so</span>
+            <span class="word">you</span>
+            <span class="gap"><canvas class="video-canvas"></canvas></span>
+            <span class="word">can</span>
+            <span class="word">live</span>
+            <span class="word">longer</span>
+        </div>
+        <div class="text-line">
+            <span class="word">and</span>
+            <span class="word">happier</span>
+            <span class="gap"><canvas class="video-canvas"></canvas></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

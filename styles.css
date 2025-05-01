@@ -1,0 +1,105 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  background-color: black; /* Черный фон */
+  color: white; /* Белый текст */
+}
+
+/* Видеофон */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-bg video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+/* Черный фон */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+}
+
+/* Контент */
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Строка текста */
+.text-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+/* Слова */
+.word {
+  font-weight: bold;
+}
+
+/* Прозрачные промежутки (где видно видео) */
+.gap {
+  width: 50px; /* Размер промежутка */
+  height: 50px; /* Высота промежутка */
+  position: relative;
+  overflow: hidden;
+}
+
+.video-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .text-line {
+      font-size: 2rem;
+  }
+
+  .gap {
+      width: 40px;
+      height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-line {
+      font-size: 1.5rem;
+  }
+
+  .gap {
+      width: 30px;
+      height: 30px;
+  }
+}
